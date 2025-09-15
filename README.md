@@ -1,1 +1,135 @@
 # robert779.github.io
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Beer store</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background-color: #F0F0F0FF;}
+  .container {
+    display: grid;
+    grid-template-areas: 
+      "header header header"
+      "left top right"
+      "left content right"
+      "left content bottom"
+      "footer footer footer";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    min-height: 100vh;
+  }
+
+  header { grid-area: header; background: #2E2E2EFF; padding: 1px; padding-right: 100px; padding-left: 100px;text-align: left;}
+  .left { grid-area: left; background: #F0F0F0FF; padding: 10px; }
+  .right { grid-area: right; background: #F0F0F0FF; padding: 10px;}
+  .top { grid-area: top; background: #F0F0F0FF; padding: 10px; text-align: center; }
+  .bottom { grid-area: bottom; background: #FFFFFF; padding: 10px; text-align: center; border-radius: 20px; margin:20px; font-size: 20px; color:#2E2E2EFF; font-weight: bold}
+  .content { grid-area: content; background: #FFFFFF; padding: 10px; text-align: center; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);}
+  footer { grid-area: footer; background: #2D2D2EFF; padding: 10px;padding-left:100px; padding-right:100px;text-align: right; }
+
+  h1 { margin: 5px 0; font-size: 20px; color:#B8B8B8FF}
+  h2 { margin: 5px 0; font-size: 30px; color:#2E2E2EFF}
+
+  .products {display: grid;grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));gap: 15px;margin-top: 15px;}
+  .product {border: 1px solid #ccc;border-radius: 10px;padding: 10px;background: #FFFFFF;transition: transform 0.2s;max-width: 250px;}
+  .product:hover {transform: scale(1.05);}
+  .product img {width: 100%;height: 150px; object-fit: cover; border-radius: 8px;}
+  .product h3 {margin: 10px 0 5px;font-size: 18px;}
+  .product p {color: #444; font-size: 14px;}
+  .logo {max-width: 200px; height: auto;}
+  .contacts {min-width:100px; max-width:300px; height:auto;}
+  .right ul {list-style-position: inside; padding-left: 0;}
+  a {color: #2E2E2EFF; text-decoration: none; font-size: 20px}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <header><img src="images/logo.png" alt="Лого магазину" class="logo"></header>
+  <div class="right">
+  <h2>Ваш Кошик:</h2>
+  Кошик порожній
+  </div>
+  <div class="top"><h2>Пиво</h2></div>
+  <div class="content">
+  <div class="products">
+    <div class="product">
+      <img src="images/beer1.jpg" alt="Zibert">
+      <h3>Пиво Zibert</h3>
+      <p>40 грн/1 літр</p>
+    </div>
+    <div class="product">
+      <img src="images/beer2.jpg" alt="Hoegarden">
+      <h3>Пиво Hoegarden</h3>
+      <p>45 грн/1 літр</p>
+    </div>
+    <div class="product">
+      <img src="images/beer3.jpg" alt="Krushovice">
+      <h3>Пиво Крушовіце</h3>
+      <p>35 грн/1 літр</p>
+    </div>
+    <div class="product">
+      <img src="images/beer4.jpg" alt="Traditional">
+      <h3>Пиво Традиційне</h3>
+      <p>30 грн/1 літр</p>
+    </div>
+    <div class="product">
+      <img src="images/beer5.jpg" alt="Lvivske">
+      <h3>Пиво темне Львівське</h3>
+      <p>45 грн/1 літр</p>
+    </div>
+    <div class="product">
+      <img src="images/beer6.jpg" alt="Okhtirske">
+      <h3>Пиво темне Охтирське</h3>
+      <p>30 грн/1 літр</p>
+    </div> 
+    <div class="product">
+      <img src="images/beer7.jpg" alt="Siverske">
+      <h3>Пиво Сіверська Легенда</h3>
+      <p>50 грн/1 літр</p>
+    </div> 
+    <div class="product">
+      <img src="images/beer8.jpg" alt="Mike`s">
+      <h3>Пиво Mike`s Hard Drink Cherry</h3>
+      <p>45 грн/1 літр</p>
+    </div> 
+    <div class="product">
+      <img src="images/beer9.jpg" alt="Hike">
+      <h3>Пиво Hike Blanche</h3>
+      <p>55 грн/1 літр</p>
+    </div> 
+    <div class="product">
+      <img src="images/beer10.jpg" alt="Zhigulivske">
+      <h3>Пиво Жигулівське</h3>
+      <p>29 грн/1 літр</p>
+    </div> 
+    <div class="product">
+      <img src="images/beer11.jpg" alt="Germanarich">
+      <h3>Пиво Germanarich Blanche</h3>
+      <p>49 грн/1 літр</p>
+    </div> 
+  </div>
+</div>
+  <div class="left">
+        <h2>Меню</h2>
+    <ul>
+      <li><a href="index.html">Пиво</a></li>
+      <li><a href="cider.html">Сидр</a></li>
+      <li><a href="vines.html">Вина</a></li>
+      <li><a href="strong.html">Міцні напої</a></li>
+      <li><a href="snacks.html">Закуски</a></li>
+    </ul>
+  </div>
+  <div class="bottom"><p>У п’ятницю – щасливі години:</p><p> -20% на все пиво!</p></div>
+  <footer><h1>Зворотній зв'язок за номером +380661234567</h1>
+    <img src = "images/contacts.png" class="contacts", usemap="#contactsmap">
+    <map name="contactsmap">
+      <area shape="rect" coords="20,10,90,90" href="https://discord.com" alt="Discord">
+      <area shape="rect" coords="110,10,190,90" href="https://web.telegram.org/k/" alt="Telegram">
+      <area shape="rect" coords="200,10,290,90" href="https://www.instagram.com/cpp.whugs/?hl=ua" alt="Instagram">
+    </map>
+    </footer>
+</div>
+</body>
+</html>
