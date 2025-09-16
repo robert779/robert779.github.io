@@ -31,10 +31,10 @@
   h2 { margin: 5px 0; font-size: 30px; color:#2E2E2EFF}
 
   .products {display: grid;grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));gap: 15px;margin-top: 15px;}
-  .product {border: 1px solid #ccc;border-radius: 10px;padding: 10px;background: #FFFFFF;transition: transform 0.2s;max-width: 250px;}
+  .product {border: 1px solid #ccc;border-radius: 10px;padding: 10px;background: #FFFFFF;transition: transform 0.2s;max-width: 250px; text-align:center}
   .product:hover {transform: scale(1.05);}
   .product img {width: 100%;height: 150px; object-fit: cover; border-radius: 8px;}
-  .product h3 {margin: 10px 0 5px;font-size: 18px;}
+  .product h3 {margin: 10px 0 5px;font-size: 18px;word-wrap: break-word;}
   .product p {color: #444; font-size: 14px;}
   .logo {max-width: 200px; height: auto;}
   .contacts {min-width:100px; max-width:300px; height:auto;}
